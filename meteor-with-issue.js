@@ -4,7 +4,7 @@ if (Meteor.isClient) {
 
 
   Template.hello.myHelper = function () {
-    console.log('re-run #with helper');
+    console.log('re-run #with helper', Session.get('rerunHelper'));
     return (Session.get('rerunHelper')) ? true : false;
   };
 
